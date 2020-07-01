@@ -4,7 +4,7 @@ from heapq import heappop, heappush
 def heuristic(start, target):
   x_distance = abs(start.position[0] - target.position[0])
   y_distance = abs(start.position[1] - target.position[1])
-  return sqrt(x_distance * x_distance + y_distance * y_distance)
+  return sqrt(x_distance**2 + y_distance**2)
 
 def a_star(graph, start, target):
   print("Starting A* algorithm!")
